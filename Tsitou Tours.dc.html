@@ -234,8 +234,15 @@ body{margin:0}
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px">
           <sc-for list="{{ circuit.stops }}" as="stop" hint-placeholder-count="3">
             <div style="background:#fff;border:1px solid rgba(21,56,42,0.1);border-radius:6px;overflow:hidden">
-              <div style="height:160px;position:relative;background-image:repeating-linear-gradient(45deg,#e8e2d3 0 11px,#f1ebdd 11px 22px);display:flex;align-items:center;justify-content:center">
-                <span style="font-family:'Courier New',monospace;font-size:10.5px;letter-spacing:1.5px;color:#8a8266;background:rgba(255,255,255,0.78);padding:5px 9px;border-radius:3px;text-transform:uppercase">{{ t.cd.comingSoon }}</span>
+              <div style="height:170px;position:relative;overflow:hidden">
+                <sc-if value="{{ stop.hasImg }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;inset:0;background-image:url('{{ stop.img }}');background-size:cover;background-position:center"></div>
+                </sc-if>
+                <sc-if value="{{ stop.noImg }}" hint-placeholder-val="{{ true }}">
+                  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,#e8e2d3 0 11px,#f1ebdd 11px 22px);display:flex;align-items:center;justify-content:center">
+                    <span style="font-family:'Courier New',monospace;font-size:10.5px;letter-spacing:1.5px;color:#8a8266;background:rgba(255,255,255,0.78);padding:5px 9px;border-radius:3px;text-transform:uppercase">{{ t.cd.comingSoon }}</span>
+                  </div>
+                </sc-if>
               </div>
               <div style="padding:16px 18px 20px">
                 <div style="font-family:Marcellus;font-size:20px;color:var(--green)">{{ stop.name }}</div>
@@ -516,7 +523,45 @@ const CIRC = {
       intro:'The famous Avenue of the Baobabs, the Kirindy forest and the limestone cathedrals of the Tsingy de Bemaraha make the West an extraordinary circuit.',
       stops:[ {name:'Morondava', sub:'West coast', desc:'A coastal town and starting point of the legendary Avenue of the Baobabs.'},
         {name:'Kirindy', sub:'Dry forest', desc:'A forest renowned for the fosa and its nocturnal lemurs.'},
-        {name:'Bekopaka', sub:'Tsingy de Bemaraha', desc:'A forest of limestone pinnacles, a UNESCO World Heritage site.'} ] } }
+        {name:'Bekopaka', sub:'Tsingy de Bemaraha', desc:'A forest of limestone pinnacles, a UNESCO World Heritage site.'} ] } },
+  zafimaniry: { id:'zafimaniry', img:'assets/zafi_village.jpg', order:4,
+    fr:{ name:'Circuit Zafimaniry', short:'Zafimaniry', tag:'Zafimaniry', route:'Antananarivo — Ambositra — Pays Zafimaniry',
+      tagline:'Le pays du bois sculpté, classé au patrimoine mondial de l’UNESCO.',
+      intro:'À 280 km au sud d’Antananarivo et à 20 km au sud d’Ambositra, les villages zafimaniry perchés sur les collines perpétuent un art du bois sculpté inscrit au patrimoine culturel immatériel de l’UNESCO.',
+      stops:[ {name:'Sur le chemin', sub:'Accès en 4×4', img:'assets/zafi_chemin.jpg', desc:'La piste de montagne qui mène, depuis Ambositra, aux villages perchés du pays zafimaniry.'},
+        {name:'Le village', sub:'Antoetra', img:'assets/zafi_quartier.jpg', desc:'Des hameaux accrochés aux collines, aux maisons de bois serrées le long des sentiers.'},
+        {name:'Maisons en bois', sub:'Architecture', img:'assets/zafi_maison.jpg', desc:'Des demeures assemblées sans clou, aux façades et volets entièrement sculptés.'},
+        {name:'Maison ancestrale', sub:'Patrimoine', img:'assets/zafi_ancestrale.jpg', desc:'La maison des aïeux, ornée de motifs géométriques transmis de génération en génération.'},
+        {name:'Art & sculpture sur bois', sub:'UNESCO', img:'assets/zafi_art.jpg', desc:'Le savoir-faire zafimaniry : marqueterie et bas-reliefs aux motifs symboliques.'},
+        {name:'Objets sculptés', sub:'Savoir-faire', img:'assets/zafi_echelle.jpg', desc:'Échelles monoxyles, ustensiles et meubles taillés dans une seule pièce de bois.'},
+        {name:'Tombeaux & sites sacrés', sub:'Mémoire', img:'assets/zafi_tombeau.jpg', desc:'Les sépultures de pierre et les lieux de mémoire qui veillent sur les villages.'} ] },
+    en:{ name:'Zafimaniry Tour', short:'Zafimaniry', tag:'Zafimaniry', route:'Antananarivo — Ambositra — Zafimaniry country',
+      tagline:'The land of carved wood, a UNESCO World Heritage treasure.',
+      intro:'280 km south of Antananarivo and 20 km south of Ambositra, the hilltop Zafimaniry villages keep alive a wood-carving art inscribed on UNESCO’s Intangible Cultural Heritage list.',
+      stops:[ {name:'On the way', sub:'4×4 access', img:'assets/zafi_chemin.jpg', desc:'The mountain track that climbs from Ambositra to the perched villages of Zafimaniry country.'},
+        {name:'The village', sub:'Antoetra', img:'assets/zafi_quartier.jpg', desc:'Hamlets clinging to the hills, with wooden houses lining the footpaths.'},
+        {name:'Wooden houses', sub:'Architecture', img:'assets/zafi_maison.jpg', desc:'Homes assembled without a single nail, their façades and shutters entirely carved.'},
+        {name:'Ancestral house', sub:'Heritage', img:'assets/zafi_ancestrale.jpg', desc:'The house of the elders, adorned with geometric motifs handed down through generations.'},
+        {name:'Wood carving & art', sub:'UNESCO', img:'assets/zafi_art.jpg', desc:'The Zafimaniry craft: marquetry and low-reliefs with symbolic patterns.'},
+        {name:'Carved objects', sub:'Craftsmanship', img:'assets/zafi_echelle.jpg', desc:'Single-log ladders, utensils and furniture carved from one piece of wood.'},
+        {name:'Tombs & sacred sites', sub:'Memory', img:'assets/zafi_tombeau.jpg', desc:'The stone tombs and places of memory that watch over the villages.'} ] } },
+  ihadilanana: { id:'ihadilanana', img:'assets/iha_montagne.jpg', order:5,
+    fr:{ name:'Circuit Ihadilanana', short:'Ihadilanana', tag:'Ihadilanana', route:'Antananarivo — Ambositra — Ihadilanana',
+      tagline:'Chutes, rivières et montagnes au cœur des hautes terres.',
+      intro:'À 80 km au sud-ouest d’Ambositra, le site d’Ihadilanana déploie un paysage de rivières vives, de cascades et de montagnes — une échappée nature, loin des routes fréquentées.',
+      stops:[ {name:'La rivière', sub:'Sur le chemin', img:'assets/iha_riviere.jpg', desc:'Les eaux calmes qui serpentent au pied des montagnes, sur la route du site.'},
+        {name:'Chute d’Ihadilanana', sub:'Cascade', img:'assets/iha_chute.jpg', desc:'La chute principale, dont les eaux dévalent les rochers dans un grand fracas.'},
+        {name:'Cascades sur roche', sub:'Rapides', img:'assets/iha_chute2.jpg', desc:'Une succession de cascades qui glissent sur de larges dalles de pierre.'},
+        {name:'Vato Marirana', sub:'Chute', img:'assets/iha_vato.jpg', desc:'La cascade de Vato Marirana, nichée entre les blocs de granit et la végétation.'},
+        {name:'Randonnée vers les chutes', sub:'Trek', img:'assets/iha_vato_chemin.jpg', desc:'Le sentier qui longe la rivière jusqu’aux chutes, à parcourir à pied.'} ] },
+    en:{ name:'Ihadilanana Tour', short:'Ihadilanana', tag:'Ihadilanana', route:'Antananarivo — Ambositra — Ihadilanana',
+      tagline:'Waterfalls, rivers and mountains in the heart of the highlands.',
+      intro:'80 km south-west of Ambositra, the Ihadilanana site unfolds a landscape of lively rivers, waterfalls and mountains — a nature escape, far from the busy roads.',
+      stops:[ {name:'The river', sub:'On the way', img:'assets/iha_riviere.jpg', desc:'Calm waters winding at the foot of the mountains, on the road to the site.'},
+        {name:'Ihadilanana falls', sub:'Waterfall', img:'assets/iha_chute.jpg', desc:'The main waterfall, its waters tumbling down the rocks with a roar.'},
+        {name:'Cascades on rock', sub:'Rapids', img:'assets/iha_chute2.jpg', desc:'A succession of cascades sliding over wide slabs of stone.'},
+        {name:'Vato Marirana', sub:'Waterfall', img:'assets/iha_vato.jpg', desc:'The Vato Marirana fall, nestled among granite blocks and greenery.'},
+        {name:'Hike to the falls', sub:'Trek', img:'assets/iha_vato_chemin.jpg', desc:'The trail following the river up to the falls, to be explored on foot.'} ] } }
 };
 
 const CARS = {
@@ -619,10 +664,10 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const t = L[lang];
     const page = this.state.page;
-    const isCircuit = ['nord','sud','est','ouest'].includes(page);
-    const order = ['nord','sud','est','ouest'];
+    const order = ['nord','sud','est','ouest','zafimaniry','ihadilanana'];
+    const isCircuit = order.includes(page);
 
-    const activeKey = ({nord:'circuits',sud:'circuits',est:'circuits',ouest:'circuits',circuits:'circuits'})[page] || page;
+    const activeKey = (order.includes(page) || page==='circuits') ? 'circuits' : page;
     const navKeys = [['home','home'],['circuits','circuits'],['location','location'],['tailor','tailor'],['contact','contact']];
     const navItems = navKeys.map(([k,target]) => ({ label:t.nav[k], active:activeKey===k, mobileColor: activeKey===k ? 'var(--gold-dk)' : 'var(--green)', go:()=>this.go(target) }));
     const footerNav = navKeys.map(([k,target]) => ({ label:t.nav[k], go:()=>this.go(target) }));
@@ -632,7 +677,7 @@ class Component extends DCLogic {
     let circuit = null;
     if (isCircuit){
       const d = CIRC[page][lang];
-      circuit = { img:CIRC[page].img, name:d.name, route:d.route, tag:d.tag, tagline:d.tagline, intro:d.intro, stops:d.stops,
+      circuit = { img:CIRC[page].img, name:d.name, route:d.route, tag:d.tag, tagline:d.tagline, intro:d.intro, stops:d.stops.map(st => ({ ...st, hasImg: !!st.img, noImg: !st.img })),
         others: order.filter(id => id!==page).map(id => ({ name:CIRC[id][lang].short, go:()=>this.go(id) })) };
     }
 
