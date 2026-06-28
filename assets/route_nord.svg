@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 482" width="470" height="482">
+<path d="M 308.5 38.1 L 328.8 80.2 L 343.3 106.3 L 325.9 139.6 L 323.0 161.4 L 318.7 184.6 L 311.4 217.9 L 295.5 280.3 L 285.3 315.1 L 270.8 341.2 L 253.4 373.1 L 244.7 402.1 L 241.8 417.5 L 198.3 432.6 L 178.0 425.3 L 151.9 387.6 L 145.2 368.8 L 134.5 335.4 L 140.3 309.3 L 154.8 280.3 L 151.9 242.6 L 154.8 215.1 L 189.6 184.6 L 212.8 152.7 L 224.4 146.9 L 253.4 112.1 L 279.5 86.0 L 288.2 74.4 L 299.8 51.2 Z" fill="#ece5d4" stroke="#cdbf9c" stroke-width="1.3" stroke-linejoin="round"></path>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 256.9 240.0 L 270.5 123.1 L 283.9 88.3 L 278.3 77.9 L 305.0 54.7 L 308.2 47.7 " stroke="#ffffff" stroke-width="6.5"></path>
+  <path d="M 256.9 240.0 L 270.5 123.1 L 283.9 88.3 L 278.3 77.9 L 305.0 54.7 L 308.2 47.7 " stroke="#b8902c" stroke-width="3.2"></path>
+</g>
+<circle cx="256.9" cy="240.0" r="7.5" fill="#15382a" stroke="#fff" stroke-width="2.5"></circle><circle cx="270.5" cy="123.1" r="4" fill="#fff" stroke="#b8902c" stroke-width="2"></circle><circle cx="283.9" cy="88.3" r="4" fill="#fff" stroke="#b8902c" stroke-width="2"></circle><circle cx="278.3" cy="77.9" r="5.5" fill="#b8902c" stroke="#fff" stroke-width="2"></circle><circle cx="305.0" cy="54.7" r="5.5" fill="#b8902c" stroke="#fff" stroke-width="2"></circle><circle cx="308.2" cy="47.7" r="5.5" fill="#b8902c" stroke="#fff" stroke-width="2"></circle>
+<text x="268.9" y="245.0" text-anchor="start" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="15.5" font-weight="700" fill="#20271f">Antananarivo</text><text x="282.5" y="128.1" text-anchor="start" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="13" font-weight="400" fill="#7a735f">Antsohihy</text><text x="295.9" y="91.3" text-anchor="start" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="13" font-weight="400" fill="#7a735f">Ambanja</text><text x="266.3" y="84.9" text-anchor="end" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="15.5" font-weight="600" fill="#20271f">Nosy Be</text><text x="317.0" y="70.7" text-anchor="start" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="15.5" font-weight="600" fill="#20271f">Montagne d&#39;Ambre</text><text x="320.2" y="43.7" text-anchor="start" font-family="Georgia, &#39;Times New Roman&#39;, serif" font-size="15.5" font-weight="600" fill="#20271f">Diego Suarez</text>
+<g font-family="Arial, sans-serif">
+  <text x="20" y="452" font-size="11" letter-spacing="0.5" fill="#9a8a55" font-weight="700">DÉPART</text>
+  <circle cx="73" cy="448" r="5" fill="#15382a"></circle><text x="84" y="452" font-size="12" fill="#20271f">Antananarivo</text>
+  <circle cx="195" cy="448" r="4.5" fill="#b8902c"></circle><text x="205" y="452" font-size="12" fill="#20271f">Étape du circuit</text>
+  <circle cx="318" cy="448" r="3.6" fill="#fff" stroke="#b8902c" stroke-width="1.8"></circle><text x="328" y="452" font-size="12" fill="#7a735f">Ville sur le trajet</text>
+</g>
+<g transform="translate(444,46)" stroke="#7a735f" fill="#7a735f">
+  <line x1="0" y1="14" x2="0" y2="-6" stroke-width="1.5"></line><path d="M -4 -2 L 0 -9 L 4 -2 Z" stroke="none"></path>
+  <text x="0" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" stroke="none">N</text>
+</g>
+</svg>
